@@ -40,33 +40,25 @@
     </table>
 
     <!-- Menu -->
+
     <div class="menu-wrapper center-relative">
       <nav id="header-main-menu">
-        <div class="menu-logo">
-          <img src="demo-images/logowhite.png" alt="VLOQ Logo" />
-        </div>
-
-        <div>
-          <div class="mob-menu">MENU</div>
-          <ul class="main-menu sm sm-clean">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <!-- <li><a href="#news">News</a></li> -->
-            <!-- <li><a href="#video">Video</a></li> -->
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+        <div class="mob-menu">MENU</div>
+        <ul class="main-menu sm sm-clean">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </div>
 
     <!-- Home -->
 
     <div id="home" class="section intro-page">
-      <div class="block content-1170 center-relative center-text">
-        <img class="top-logo" src="demo-images/logowhite.png" alt="Boxus" />
+      <div class="block center-relative center-text">
         <br />
         <h1 class="big-title">
           Build Your Digital Future <span>with VLOQ </span>
@@ -105,12 +97,14 @@
                     gap: 10px;
                   "
                 >
-                  <div class="service-holder" >
+                  <div class="service-holder">
                     <img src="demo-images/icon_01.png" alt="" />
                     <div class="service-content-holder">
                       <div class="service-title">Software Development</div>
                       <div class="service-content">
-                        We create scalable, custom software that grows with your business - delivering consistent performance through agile development and clean architecture.<br />
+                        We create scalable, custom software that grows with your
+                        business - delivering consistent performance through
+                        agile development and clean architecture.<br />
                       </div>
                     </div>
                   </div>
@@ -119,7 +113,10 @@
                     <div class="service-content-holder">
                       <div class="service-title">Web Development</div>
                       <div class="service-content">
-                         Our responsive, SEO-friendly websites enhance your online presence and ensure seamless user experiences across all devices, backed by ongoing support and optimization.<br />
+                        Our responsive, SEO-friendly websites enhance your
+                        online presence and ensure seamless user experiences
+                        across all devices, backed by ongoing support and
+                        optimization.<br />
                       </div>
                     </div>
                   </div>
@@ -128,7 +125,9 @@
                     <div class="service-content-holder">
                       <div class="service-title">Mobile App Development</div>
                       <div class="service-content">
-                        We develop high-performance mobile apps for iOS and Android, integrating features like push notifications, analytics and secure payments to drive engagement.<br />
+                        We develop high-performance mobile apps for iOS and
+                        Android, integrating features like push notifications,
+                        analytics and secure payments to drive engagement.<br />
                       </div>
                     </div>
                   </div>
@@ -137,7 +136,10 @@
                     <div class="service-content-holder">
                       <div class="service-title">Custom Requirement</div>
                       <div class="service-content">
-                        From CRM to e-commerce and data systems, we build bespoke solutions with robust backend, APIs and automations - engineered for scalability, security and performance.<br />
+                        From CRM to e-commerce and data systems, we build
+                        bespoke solutions with robust backend, APIs and
+                        automations - engineered for scalability, security and
+                        performance.<br />
                       </div>
                     </div>
                   </div>
@@ -758,7 +760,7 @@
             <div class="progress_bar">
               <div class="progress_bar_field_holder" style="width: 91%">
                 <div class="progress_bar_title" style="color: #b24564">
-                 LARAVEL
+                  LARAVEL
                 </div>
                 <div class="progress_bar_percent_text" style="color: #b24564">
                   91%
@@ -772,7 +774,7 @@
             <div class="progress_bar">
               <div class="progress_bar_field_holder" style="width: 99%">
                 <div class="progress_bar_title" style="color: #468ac7">
-                    SYSTEM 
+                  SYSTEM
                 </div>
                 <div class="progress_bar_percent_text" style="color: #468ac7">
                   99%
@@ -783,7 +785,7 @@
                 ></div>
               </div>
             </div>
-             <div class="progress_bar">
+            <div class="progress_bar">
               <div class="progress_bar_field_holder" style="width: 93%">
                 <div class="progress_bar_title" style="color: #55b286">
                   REACT NATIVE
@@ -941,5 +943,17 @@
     <script type="text/javascript" src="js/imagesloaded.pkgd.js"></script>
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+      window.addEventListener("resize", () => {
+        document.querySelector(
+          ".intro-page"
+        ).style.minHeight = `${window.innerHeight}px`;
+      });
+
+      // Run it once on load too
+      document.querySelector(
+        ".intro-page"
+      ).style.minHeight = `${window.innerHeight}px`;
+    </script>
   </body>
 </html>
