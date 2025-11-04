@@ -68,6 +68,12 @@ body a:hover {
     justify-content: space-between;
     align-items: center;
   }
+  .navlogo {
+    height: 50px;
+  }
+  .logo-container {
+    padding-bottom: 5px;
+  }
 }
 
 .logo-container {
@@ -75,11 +81,8 @@ body a:hover {
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 17px;
+  padding-top: 5px;
   align-items: center;
-}
-.navlogo {
-  height: 40px;
-  width: auto;
 }
 #header-main-menu {
   text-align: center;
