@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
@@ -95,8 +96,8 @@ body a:hover {
 .main-menu.sm-clean a {
   font-size: 13px;
   line-height: 40px;
-  color: #fff;
-  font-weight: 400;
+  color: #fff !important;
+  font-weight: 800;
   transition: color 0.2s linear;
   text-transform: uppercase;
   letter-spacing: 0.03cm;
@@ -112,7 +113,7 @@ body a:hover {
 }
 
 .main-menu.sm-clean a:hover {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 .sm-clean li.active a {
@@ -283,7 +284,6 @@ h1.big-title {
 }
 
 .title-desc {
-  font-family: "PT Serif", serif;
   font-size: 22px;
   line-height: 26px;
   max-width: 333px;
@@ -325,6 +325,7 @@ h1.big-title {
   vertical-align: top;
 }
 
+
 .service-content-holder {
   display: inline-block;
   width: 240px;
@@ -345,9 +346,9 @@ h1.big-title {
 #portfolio {
   background-color: #221c5a;
   /* background-image: url("demo-images/background_img_02.jpg"); */
-  background-image: url("demo-images/Bg-Image7.jpg");
+  background-image: url("demo-images/Bg-Image02.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top;    
   background-size: auto;
   z-index: 8;
 }
@@ -576,7 +577,7 @@ div.pp_default .pp_loaderIcon {
 }
 
 .vloq-about-container {
-  max-width: 1200px;
+
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -871,13 +872,112 @@ a.video-popup-holder:hover img.popup-play {
   width: 100%;
 }
 
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.skill-card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 0.6s;
+}
+
+.skill-card:hover::before {
+  top: -20%;
+  left: -20%;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.skill-title {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.skill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.skill-description {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Accent Colors per skill */
+.accent-green .skill-icon {
+  background: #32db8a;
+}
+.accent-yellow .skill-icon {
+  background: #ffbb42;
+}
+.accent-pink .skill-icon {
+  background: #e74c78;
+}
+.accent-blue .skill-icon {
+  background: #4c9ee7;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+  .skill-title {
+    font-size: 1.1rem;
+  }
+  .skill-description {
+    font-size: 0.9rem;
+  }
+}
 /* END SKILLS SECTION */
 
 /* CONTACT SECTION */
 
 #contact {
   background-color: rgb(34, 28, 90);
-  background-image: url("demo-images/background_img_05b.jpg");
+  background-image: url("demo-images/Bg-contact02.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: auto;
