@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 26px;
-  font-weight: 400;
+  font-weight: 400; 
   color: #23214c;
 }
 
@@ -534,134 +536,184 @@ div.pp_default .pp_loaderIcon {
   padding-bottom: 0;
 }
 
-.member-content-holder {
-  width: 330px;
-  padding: 90px 50px 50px 50px;
-  float: left;
-}
 
-.member-image-holder {
-  width: 370px;
-  float: right;
-}
-
-.member-image-holder img {
-  width: 100% !important;
-}
-
-.member-name {
-  line-height: 26px;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 0;
-}
-
-.member-position {
-  line-height: 16px;
-  font-size: 14px;
-  padding-bottom: 50px;
-  color: #ee87a4;
-  letter-spacing: 4px;
-}
-
-.member-content {
-  line-height: 26px;
-}
-
-.image-slider-wrapper.img .image-slider li img {
-  width: 100%;
-}
 
 .vloq-about-wrapper {
-  padding: 60px 30px;
+  padding: 60px 0px;
 }
 
 .vloq-about-container {
-
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
 .vloq-about-card {
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 28px 24px;
-  transition: all 0.3s ease;
+  background: #e64b77;
+  border-radius: 12px;
+  padding: 20px;
   position: relative;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .vloq-about-card::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 6px;
-  height: 100%;
-  background-color: #e64b77;
-  border-radius: 10px 0 0 10px;
-  transition: height 0.4s ease;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 0.6s;
+  pointer-events: none;
 }
 
 .vloq-about-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.vloq-about-card:hover::before {
+  top: -20%;
+  left: -20%;
+}
+
+.vloq-about-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.vloq-about-icon {
+  width: 38px;
+  height: 38px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #e64b77;
+}
+
+.vloq-about-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #e64b77;
 }
 
 .vloq-about-title {
-  font-size: 1.75rem;
+  color: white;
+  font-size: 18px;
   font-weight: 700;
-  color: #111827;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .vloq-about-text {
-  font-size: 0.98rem;
-  color: #444;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
   line-height: 1.6;
   margin: 0;
 }
 
 .vloq-about-list {
-  list-style: disc inside;
-  font-size: 0.98rem;
-  color: #444;
-  line-height: 1.6;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .vloq-about-list li {
-  margin-bottom: 8px;
+  margin-bottom: 3px;
+  padding-left: 18px;
+  position: relative;
 }
 
-/* Responsive design */
+.vloq-about-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.vloq-about-list strong {
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .vloq-about-wrapper {
+    padding: 40px 16px;
+  }
+  
+  .vloq-about-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
   .vloq-about-card {
-    padding: 22px 18px;
+    padding: 18px;
   }
+  
+  .vloq-about-header {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .vloq-about-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .vloq-about-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
   .vloq-about-title {
-    font-size: 1.1rem;
-  }
-  .vloq-about-text,
-  .vloq-about-list {
-    font-size: 0.95rem;
+    font-size: 17px;
   }
 }
 
 @media (max-width: 480px) {
-  .vloq-about-wrapper {
-    padding: 40px 15px;
+  .vloq-about-card {
+    padding: 16px;
   }
-  .vloq-about-container {
-    gap: 18px;
+  
+  .vloq-about-icon {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .vloq-about-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+  
+  .vloq-about-title {
+    font-size: 16px;
+  }
+  
+  .vloq-about-text,
+  .vloq-about-list {
+    font-size: 13px;
   }
 }
-
 /* END ABOUT SECTION */
 
 /* NEWS SECTION */
@@ -881,7 +933,7 @@ a.video-popup-holder:hover img.popup-play {
 }
 
 .skill-card {
-  background: #1e293b;
+  background-color: rgb(34, 28, 90);;
   border-radius: 16px;
   padding: 24px 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -1469,7 +1521,7 @@ footer {
 
   .section-content-holder {
     width: 100%;
-    padding: 30px 0;
+    padding: 20px 0;
   }
 
   .section-content-holder .content-wrapper {
