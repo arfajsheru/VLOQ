@@ -99,7 +99,7 @@ body a:hover {
   font-size: 13px;
   line-height: 40px;
   color: #fff !important;
-  font-weight: 800;
+  font-weight: 500;
   transition: color 0.2s linear;
   text-transform: uppercase;
   letter-spacing: 0.03cm;
@@ -242,7 +242,7 @@ body a:hover {
 /* HOME SECTION */
 
 .intro-page {
-  min-height: 100vh; /* ensures it fills the visible screen height */
+  min-height: 80vh; /* ensures it fills the visible screen height */
   width: 100%;
   padding-bottom: 170px;
   background-color: #221c5a;
@@ -591,7 +591,6 @@ div.pp_default .pp_loaderIcon {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 14px;
 }
 
 .vloq-about-icon {
@@ -616,21 +615,17 @@ div.pp_default .pp_loaderIcon {
   color: white;
   font-size: 18px;
   font-weight: 700;
-  margin: 0;
   line-height: 1.2;
 }
 
 .vloq-about-text {
   color: rgba(255, 255, 255, 0.95);
   font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 2;
 }
 
 .vloq-about-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
   color: rgba(255, 255, 255, 0.95);
   font-size: 14px;
   line-height: 1.7;
@@ -1036,6 +1031,8 @@ a.video-popup-holder:hover img.popup-play {
   z-index: 3;
 }
 
+
+
 #contact .section-title-holder {
   background-color: rgb(230, 75, 119);
 }
@@ -1189,6 +1186,34 @@ div.contact-form-response-output {
 span.contact-form-not-valid-tip {
   font-size: 10px;
 }
+
+
+.contact-info {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+
+.info-item i {
+  font-size: 18px;
+  color: #e54b76;
+}
+
+strong {
+  font-weight: 600;
+  color: #111;
+}
+
 
 /* END CONTACT SECTION */
 
