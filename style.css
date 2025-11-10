@@ -556,36 +556,16 @@ div.pp_default .pp_loaderIcon {
   padding: 20px;
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.vloq-about-card::before {
-  content: "";
-  position: absolute;
-  top: -60%;
-  left: -60%;
-  width: 220%;
-  height: 220%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
-  transform: rotate(25deg);
-  transition: 0.6s;
-  pointer-events: none;
-}
 
 .vloq-about-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(230, 75, 119, 0.4);
 }
 
-.vloq-about-card:hover::before {
-  top: -20%;
-  left: -20%;
-}
 
 .vloq-about-header {
   display: flex;
