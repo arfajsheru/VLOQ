@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   line-height: 26px;
-  font-weight: 400; 
+  font-weight: 400;
   color: #23214c;
 }
 
@@ -327,7 +327,6 @@ h1.big-title {
   vertical-align: top;
 }
 
-
 .service-content-holder {
   display: inline-block;
   width: 240px;
@@ -350,7 +349,7 @@ h1.big-title {
   /* background-image: url("demo-images/background_img_02.jpg"); */
   background-image: url("demo-images/Bg-Image02.jpg");
   background-repeat: no-repeat;
-  background-position: center top;    
+  background-position: center top;
   background-size: auto;
   z-index: 8;
 }
@@ -536,8 +535,6 @@ div.pp_default .pp_loaderIcon {
   padding-bottom: 0;
 }
 
-
-
 .vloq-about-wrapper {
   padding: 60px 0px;
 }
@@ -560,12 +557,10 @@ div.pp_default .pp_loaderIcon {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .vloq-about-card:hover {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 8px 24px rgba(230, 75, 119, 0.4);
 }
-
 
 .vloq-about-header {
   display: flex;
@@ -618,7 +613,7 @@ div.pp_default .pp_loaderIcon {
 }
 
 .vloq-about-list li::before {
-  content: '→';
+  content: "→";
   position: absolute;
   left: 0;
   color: white;
@@ -635,31 +630,31 @@ div.pp_default .pp_loaderIcon {
   .vloq-about-wrapper {
     padding: 40px 16px;
   }
-  
+
   .vloq-about-container {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .vloq-about-card {
     padding: 18px;
   }
-  
+
   .vloq-about-header {
     gap: 10px;
     margin-bottom: 12px;
   }
-  
+
   .vloq-about-icon {
     width: 36px;
     height: 36px;
   }
-  
+
   .vloq-about-icon svg {
     width: 18px;
     height: 18px;
   }
-  
+
   .vloq-about-title {
     font-size: 17px;
   }
@@ -669,21 +664,21 @@ div.pp_default .pp_loaderIcon {
   .vloq-about-card {
     padding: 16px;
   }
-  
+
   .vloq-about-icon {
     width: 34px;
     height: 34px;
   }
-  
+
   .vloq-about-icon svg {
     width: 17px;
     height: 17px;
   }
-  
+
   .vloq-about-title {
     font-size: 16px;
   }
-  
+
   .vloq-about-text,
   .vloq-about-list {
     font-size: 13px;
@@ -908,7 +903,7 @@ a.video-popup-holder:hover img.popup-play {
 }
 
 .skill-card {
-  background-color: rgb(34, 28, 90);;
+  background-color: rgb(34, 28, 90);
   border-radius: 16px;
   padding: 24px 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -1003,15 +998,13 @@ a.video-popup-holder:hover img.popup-play {
 /* CONTACT SECTION */
 
 #contact {
-  background-color: rgb(34, 28, 90);
-  background-image: url("demo-images/Bg-contact03.png");
+  background-color: #1c0f61;
+  background-image: url("demo-images/Bg-contact04.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: auto;
   z-index: 3;
 }
-
-
 
 #contact .section-title-holder {
   background-color: rgb(230, 75, 119);
@@ -1167,7 +1160,6 @@ span.contact-form-not-valid-tip {
   font-size: 10px;
 }
 
-
 .contact-info {
   font-family: "Poppins", sans-serif;
   color: #222;
@@ -1194,13 +1186,12 @@ strong {
   color: #111;
 }
 
-
 /* END CONTACT SECTION */
 
 /* FOOTER */
 
 footer {
-  background-color: #221c5a;
+  background-color: #1c0f61;
 }
 
 .footer {
