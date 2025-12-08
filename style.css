@@ -1233,11 +1233,6 @@ footer {
   background-size: 100% auto;
 }
 
-
-
-
-
-
 /* RESPONSIVE PART */
 
 @media screen and (max-width: 1270px) {
@@ -1379,10 +1374,6 @@ footer {
     margin-left: 0;
   }
 
-  .single-portfolio article {
-    padding-top: 140px;
-  }
-
   .one_half {
     width: 100%;
     float: none;
@@ -1410,10 +1401,6 @@ footer {
   .image-slider-wrapper.service a.image_slider_next {
     top: -89px;
     right: 0;
-  }
-
-  .section {
-    padding-bottom: 150px;
   }
 
   .section-content-holder.right {
@@ -1741,7 +1728,6 @@ footer {
 }
 /* Portfolio one css */
 
-
 .single-portfolio article .entry-content {
   background-color: #fff;
   font-size: 18px;
@@ -1754,8 +1740,12 @@ footer {
   background-color: #26276d;
   line-height: 0;
   font-size: 0;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .single-portfolio .x-close img {
@@ -1763,8 +1753,6 @@ footer {
   transition: opacity 0.2s linear;
   width: 30px;
   height: 30px;
-  padding-top: 15px;
-  padding-left: 15px;
 }
 /* Header layout */
 .project-header {
@@ -1779,8 +1767,8 @@ footer {
 /* Logo */
 .project-logo {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 12px;
   background: #ffffff;
   display: flex;
@@ -1854,8 +1842,6 @@ footer {
   letter-spacing: 0.5px;
   position: relative;
 }
-
-
 
 .summary-text {
   font-size: 15px;
@@ -2040,7 +2026,6 @@ footer {
 
   .summary-title {
     font-size: 22px;
-    margin-bottom: 12px;
   }
 
   .summary-image-wrapper {
@@ -2053,12 +2038,13 @@ footer {
   .project-header {
     padding: 16px 14px;
     display: flex;
+    flex-direction: column;
     align-items: start;
   }
 
   .project-logo {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
   }
 
   .project-title {
