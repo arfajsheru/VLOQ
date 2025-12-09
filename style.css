@@ -1816,7 +1816,7 @@ footer {
 /* Close button */
 .x-close {
   flex-shrink: 0;
-  background-color: #1A1A1A; /* Premium dark close button tone */
+  background-color: #1a1a1a; /* Premium dark close button tone */
   line-height: 0;
   font-size: 0;
   width: 50px;
@@ -1828,10 +1828,7 @@ footer {
   transition: all 0.3s ease;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.15);
-
 }
-
-
 
 .x-close img {
   opacity: 0.7;
@@ -2234,7 +2231,39 @@ footer {
   }
 }
 
+/* Scroll Animation Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
 
+/* Default Up Animation */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* Left Reveal */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
 
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
 
+/* Right Reveal */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}

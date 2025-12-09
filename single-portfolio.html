@@ -123,7 +123,7 @@
             </div>
 
           <!-- project summary -->
-          <div class="project-summary-right" >
+          <div class="project-summary-right reveal" >
               <div class="summary-content">
                   <p class="summary-title">
                       <span>Executive Summary</span>
@@ -149,7 +149,7 @@
           </div>
 
           <!-- project background -->
-          <div class="project-summary" style="background-color: #EB001B;">
+          <div class="project-summary reveal-left" style="background-color: #EB001B;">
 
               <div class="summary-image-wrapper">
                   <img
@@ -171,7 +171,7 @@
           </div>
           
           <!-- project challenges -->
-          <div class="project-summary-right">    
+          <div class="project-summary-right reveal-right">    
               <div class="summary-content">
                   <p class="summary-title">
                       <span>challenges</span>
@@ -197,7 +197,7 @@
               </div>
           </div>
 
-          <div class="solution-section" style="background-color: #492973;">
+          <div class="solution-section reveal" style="background-color: #492973;">
             <div class="summary-content">
                   <p class="summary-title" style="color: white;">
                       <span>Solution</span>
@@ -251,7 +251,7 @@
           </div>
 
           <!-- Project impact -->
-          <div class="project-summary" >
+          <div class="project-summary reveal-left" >
 
               <div class="summary-image-wrapper">
                   <img
@@ -277,7 +277,7 @@
           </div>
 
           <!-- project conclusion -->
-          <div class="project-summary-right"style="background-color: #1C075E;" >
+          <div class="project-summary-right reveal-right"style="background-color: #1C075E;" >
               <div class="summary-content">
                   <p class="summary-title text-white">
                       <span>Conclusion</span>
@@ -289,7 +289,7 @@
                   </div>
                   <div class="summary-image-wrapper">
                       <img
-                      src="./demo-images/portfolioImages/executivesummary.jpg"
+                      src="./demo-images/portfolioImages/conclusionnew.png"
                       class="summary-image"
                       alt="Executive Summary Image"
                       />
@@ -299,6 +299,33 @@
       </article>
 
       <!--Load JavaScript-->
+
+      <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        },
+        {
+            threshold: 0.15,
+            rootMargin: "0px 0px -80px 0px"
+        }
+    );
+
+    items.forEach((section, index) => {
+        setTimeout(() => {
+            observer.observe(section);
+        }, index * 120); // stagger effect
+    });
+});
+</script>
+
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/jquery.sticky-kit.min.js"></script>
       <script type="text/javascript" src="js/jquery.smartmenus.min.js"></script>
