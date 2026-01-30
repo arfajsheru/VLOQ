@@ -285,19 +285,18 @@ body a:hover {
 /* HOME SECTION */
 
 .intro-page {
-  min-height: 80vh; /* ensures it fills the visible screen height */
-  width: 100%;
-  padding-bottom: 170px;
+  min-height: 100vh;
   background-color: #221c5a;
   background-image: url("demo-images/background_img_01b.jpg");
-  background-repeat: repeat;
-  background-position: center top;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centers inner content vertically */
-  align-items: center; /* centers inner content horizontally */
-  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 80px 20px 40px;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -306,32 +305,96 @@ body a:hover {
   }
 }
 
-.top-logo {
-  width: 180px !important;
-  padding-top: 230px;
+.block.center-relative {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
+.center-text {
+  text-align: center;
+}
+
+/* Desktop heading */
 h1.big-title {
   font-family: "Montserrat", sans-serif;
-  font-size: 56px;
+  font-size: 72px;
   font-weight: 700;
-  line-height: 60px;
-  padding-top: 30px;
+  line-height: 1.2;
   color: #fff;
-  margin-left: auto;
-  margin-right: auto;
+  letter-spacing: -2px;
+  margin: 0 auto 30px;
+  max-width: 900px;
+  text-align: center;
 }
 
-.big-title span {
-  display: block;
-}
-
+/* Description */
 .title-desc {
-  font-size: 22px;
-  line-height: 26px;
-  max-width: 333px;
+  font-size: 40px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
   margin: 0 auto;
-  color: #fff;
+  max-width: 600px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  h1.big-title {
+    font-size: 56px;
+    letter-spacing: -1.5px;
+  }
+
+  .big-title span {
+    font-size: 56px;
+  }
+
+  .title-desc {
+    font-size: 22px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .intro-page {
+    padding: 80px 15px 40px;
+  }
+
+  h1.big-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+
+  .big-title span {
+    font-size: 42px;
+    margin-top: 8px;
+  }
+
+  .title-desc {
+    font-size: 18px;
+    max-width: 90%;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  h1.big-title {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .big-title span {
+    font-size: 32px;
+    margin-top: 5px;
+  }
+
+  .title-desc {
+    font-size: 16px;
+  }
 }
 
 .page-template-page-home .intro-page footer {
