@@ -97,7 +97,7 @@ body a:hover {
 
 .main-menu.sm-clean a {
   font-size: 16px;
-  line-height: 40px;
+  line-height: 50px;
   color: #fff !important;
   font-weight: 500;
   transition: color 0.2s linear;
@@ -241,80 +241,62 @@ body a:hover {
 
 /* HOME SECTION */
 
-/* MAIN HERO SECTION */
 .intro-page {
-  min-height: 80vh;
+  min-height: 80vh; /* ensures it fills the visible screen height */
   width: 100%;
-
+  padding-bottom: 170px;
   background-color: #221c5a;
   background-image: url("demo-images/background_img_01b.jpg");
   background-repeat: repeat;
   background-position: center top;
   background-size: cover;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  padding: 0 20px; /* horizontal breathing space */
-
-  position: relative;
+  flex-direction: column;
+  justify-content: center; /* centers inner content vertically */
+  align-items: center; /* centers inner content horizontally */
   z-index: 10;
 }
 
-/* CONTENT CENTER HOLDER */
-.hero-center {
-  max-width: 900px;
-  width: 100%;
-}
-
-/* TITLE FIX */
-h1.big-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.15;
-
-  color: #fff;
-  letter-spacing: -1px;
-
-  margin: 0 auto 15px auto; /* remove top padding */
-  padding: 0;
-
-  width: 100%;
-}
-
-/* SUB TITLE */
-.title-desc {
-  font-size: 22px;
-  line-height: 26px;
-
-  max-width: 420px;
-  margin: 0 auto;
-
-  color: #fff;
-}
-
-/* MOBILE RESPONSIVE FIX */
-@media (max-width: 768px) {
-  h1.big-title {
-    font-size: 38px;
-    line-height: 1.25;
-  }
-
-  .title-desc {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
-
-/* IOS HEIGHT FIX */
 @supports (-webkit-touch-callout: none) {
   .intro-page {
     min-height: -webkit-fill-available;
   }
+}
+
+.top-logo {
+  width: 180px !important;
+  padding-top: 230px;
+}
+
+h1.big-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 100%;
+  padding-top: 30px;
+  color: #fff;
+  letter-spacing: -1px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.big-title span {
+  display: block;
+}
+
+.title-desc {
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 333px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.page-template-page-home .intro-page footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* END HOME SECTION */
@@ -1557,7 +1539,6 @@ footer {
   }
 
   h1.big-title {
-    
     font-size: 40px;
     padding-top: 0;
   }
@@ -2292,25 +2273,20 @@ footer {
   transform: translateX(0);
 }
 
-/* Main Header Container */
-.logo-container {
+/* Logo Container */
+.navlogo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  height: 60px; /* Navbar height alignment */
+  padding: 5px 10px;
+
+  flex-shrink: 0;
 }
 
-/* Logo Wrapper */
-.logo-wrapper {
-  width: auto;
-  max-width: 340px; /* Increased container capacity */
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-}
-
-/* Logo Image Scaling */
-.responsive-logo {
-  width: 150px; /* Increased from 150px */
+/* Logo Image Optimization */
+.navlogo-img {
+  width: 180px; /* Desktop default size */
   height: auto;
 
   object-fit: contain;
@@ -2318,23 +2294,30 @@ footer {
   /* Black background neutralization */
   mix-blend-mode: screen;
 
-  /* Rendering optimization */
+  /* Rendering clarity */
   image-rendering: auto;
 
-  /* Prevent flex shrink issue */
-  flex-shrink: 0;
+  /* Prevent distortion */
+  max-width: 100%;
+}
+
+/* Tablet Optimization */
+@media (max-width: 1024px) {
+  .navlogo-img {
+    width: 150px;
+  }
 }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
-  .responsive-logo {
-    width: 120px; /* Balanced mobile size */
-  }
-
-  .logo-wrapper {
-    max-width: 260px;
+  .navlogo-img {
+    width: 130px;
   }
 }
 
-
-
+/* Small Devices */
+@media (max-width: 480px) {
+  .navlogo-img {
+    width: 110px;
+  }
+}
