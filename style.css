@@ -117,9 +117,7 @@ body a:hover {
   .navlogo {
     height: 50px;
   }
-  .logo-container {
-    padding-bottom: 5px;
-  }
+  
 }
 
 .logo-container {
@@ -129,7 +127,9 @@ body a:hover {
   padding-right: 17px;
   padding-top: 5px;
   align-items: center;
+  height: 55px;
 }
+
 #header-main-menu {
   text-align: center;
 }
@@ -2390,7 +2390,7 @@ footer {
 
 /* Logo Image Optimization */
 .navlogo-img {
-  width: 180px; /* Desktop default size */
+  width: 150px; /* Desktop default size */
   height: auto;
 
   object-fit: contain;
